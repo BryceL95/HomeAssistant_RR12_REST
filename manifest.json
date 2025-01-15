@@ -1,0 +1,10 @@
+{
+    "domain": "my_integration",
+    "name": "My Integration",
+    "version": "1.0",
+    "requirements": ["requests"],
+    "dependencies": [],
+    "codeowners": ["@yourgithubusername"],
+    "config_flow": true
+  }
+  
