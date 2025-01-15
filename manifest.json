@@ -1,6 +1,6 @@
 {
-    "domain": "my_integration",
-    "name": "My Integration",
+    "domain": "RR12_REST",
+    "name": "RR12 REST",
     "version": "1.0",
     "requirements": ["requests"],
     "dependencies": [],

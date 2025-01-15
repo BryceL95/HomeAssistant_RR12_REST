@@ -3,10 +3,12 @@ from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_HOST, CONF_NAME
 import requests
 
-DOMAIN = "my_integration"
+DOMAIN = "RR12_REST"
 
 async def async_setup(hass: HomeAssistant, config: dict):
     """Set up the My Integration component."""
+
+
     hass.data[DOMAIN] = {}
 
     return True
