@@ -3,7 +3,7 @@ from homeassistant.const import CONF_NAME
 from . import MyApiClient
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
-    api_client = hass.data["my_integration"][config_entry.entry_id]
+    api_client = hass.data["RR12_REST"][config_entry.entry_id]
 
     async_add_entities([MySensor(api_client)])
 
@@ -15,18 +15,15 @@ class MySensor(Entity):
 
     @property
     def name(self):
-        """Return the name of the sensor."""
         return self._name
 
     @property
     def state(self):
-        """Return the state of the sensor."""
         return self._state
 
     async def async_update(self):
-        """Fetch new state data from the device."""
         data = self._api_client.get_data()
         if data:
-            self._state = data.get("value")  # Replace with actual key in the response
+            self._state = data["Devices"][0]["DeviceID"]
         else:
             self._state = None
