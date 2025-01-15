@@ -4,7 +4,7 @@
     "version": "1.0",
     "requirements": ["requests"],
     "dependencies": [],
-    "codeowners": ["@yourgithubusername"],
+    "codeowners": ["@BryceL95"],
     "config_flow": true
   }
   
