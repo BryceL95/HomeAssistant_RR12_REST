@@ -1,17 +1,11 @@
 from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
-from homeassistant.const import CONF_HOST, CONF_NAME
 import requests
 
 DOMAIN = "RR12_REST"
 
-async def async_setup(hass: HomeAssistant, config: dict):
-    hass.data[DOMAIN] = {}
-    return True
-
-async def async_setup_entry(hass: HomeAssistant, entry: config_entries.ConfigEntry):
-    hass.data[DOMAIN][entry.entry_id] = MyApiClient()
-
+async def async_setup(hass, config):
+    hass.states.async_set("RR12_REST.world", "Paulus")
     return True
 
 class MyApiClient:
